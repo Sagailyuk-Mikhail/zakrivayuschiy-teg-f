@@ -43,12 +43,12 @@
 }
 
 .header__logo {
-    font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);;
+    font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
     font-family: var(--font-family-accent), sans-serif;
 }
 
 .header__title {
     font-family: var(--font-family-accent), sans-serif;
-    font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);;
+    font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
     justify-self: center;
 }
