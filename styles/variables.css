@@ -1,12 +1,22 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-    --font-family-main: 'Inter', sans-serif;
-    --font-family-accent: 'Press Start 2P', fantasy;
-    --content-width: clamp(375px, calc(260.6px + 30.52vw), 700px);
-    --tittle-height: clamp(327px, calc(312.5px + 3.85vw), 368px);
-    --font-weight-text: 400;
-    --font-weight-heading: 700;
+    --main-font: 'Inter';
+    --accent-font: 'Press Start 2P';
+
+    --main-font-weight: 400;
+    --heading-font-weight: 700;
+
+    --accent-color: #000;
+    --background-color: #fff;
+
+    --contour-color: #000;
+    --animation-fill-color: #ff0000;
     --border: 2px solid #000000;
+    --button-text-color: #fff;
+
+    --content-width: clamp(375px, calc(260.6px + 30.52vw), 700px);
+    --title-height: clamp(327px, calc(312.5px + 3.85vw), 368px);
+
     --background-image:
             repeating-linear-gradient(
                     to right,
