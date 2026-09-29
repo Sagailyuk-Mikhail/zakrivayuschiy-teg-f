@@ -8,6 +8,7 @@
 
     --accent-color: #000;
     --background-color: #fff;
+    --core-color: #fff;
 
     --contour-color: #000;
     --animation-fill-color: #ff0000;
@@ -15,7 +16,8 @@
     --button-text-color: #fff;
 
     --content-width: clamp(375px, calc(260.6px + 30.52vw), 700px);
-    --title-height: clamp(327px, calc(312.5px + 3.85vw), 368px);
+    --title-height: clamp(20.4375rem, 19.5352rem + 3.8498vw, 23rem);
+
 
     --background-image:
             repeating-linear-gradient(
@@ -30,7 +32,8 @@
             ),
             linear-gradient(
                     to bottom,
+                    #e7e7e7 0,
                     #e7e7e7 0.01%,
-                    #1a1a1a
+                    #1a1a1a 100%
             );
 }

@@ -11,38 +11,30 @@
 */
 
 .page {
-    font-family: var(--main-font), Arial, sans-serif;
-    font-variation-settings: 'wght' var(--main-font-weight);
-
     min-inline-size: 320px;
     min-block-size: 100dvb;
-
+    font-family: var(--main-font), sans-serif;
     background-image: var(--background-image);
-    background-position: center;
+    background-size: 100vw 100vh;
+    background-position: center top;
     background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-}
-
-.content-width {
-    inline-size: var(--content-width);
-    margin-inline: auto;
 }
 
 .header {
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    margin-block-start: 100px;
-    margin-block-end: 100px;
-    padding-block: clamp(120px, 13vw, 136px);
-
+    margin-block-start: 98px;
+    margin-block-end: 98px;
+    padding-block: clamp(122.5px, 13vw, 130px);
     border: var(--border);
-
-    background-color: var(--background-color);
-
     font-family: var(--accent-font), fantasy;
+    background-color: var(--background-color);
+}
+
+.content-width {
+    inline-size: var(--content-width);
+    margin-inline: auto;
 }
 
 .header__logo {
@@ -95,32 +87,27 @@
 }
 
 .card__content {
-    padding: 25px;
+    margin-inline-start: 25px;
+    margin-inline-end: 25px;
+    margin-block-start: 25px;
+
 }
 
 .card__text {
     font-size: 18px;
     line-height: 21px;
-}
-
-.card__text + .card__text {
-    margin-block-start: 27px;
+    margin-block-end: 25px;
 }
 
 .card__label {
     position: absolute;
     z-index: 1;
-
     inset-block-start: 25px;
     inset-inline-end: 25px;
-
     font-family: var(--accent-font), fantasy;
     font-size: 14px;
-
     opacity: 0.5;
-
     mix-blend-mode: hard-light;
-
     text-shadow: 1px 0 var(--background-color),
     -1px 0 var(--background-color),
     0 1px var(--background-color),
@@ -157,9 +144,10 @@
 
     cursor: pointer;
 
-    transition: box-shadow 0.3s ease, transform 0.3s ease, color 0.3s ease;
+    transition:
+            box-shadow 0.3s ease,
+            transform 0.3s ease;
 }
-
 .button::before {
     content: '';
     position: absolute;
@@ -190,6 +178,8 @@
 .button__text {
     position: relative;
     z-index: 1;
+    font-family: var(--accent-font), fantasy;
+    font-size: 14px;
 }
 
 .card__like-button {
@@ -205,16 +195,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
     width: 39px;
     height: 36px;
     padding: 0;
-
     border: 2px solid transparent;
     background-color: transparent;
-
     cursor: pointer;
-
     transition: border-color 0.3s ease;
 }
 
@@ -230,4 +216,90 @@
     pointer-events: none;
 }
 
+.dialog {
+    display: none;
+
+    inline-size: min(90vw, 353px);
+    padding: 30px;
+
+    border: 2px solid var(--contour-color);
+    background-color: var(--background-color);
+
+    color: var(--contour-color);
+}
+
+.dialog[open] {
+    display: grid;
+}
+
+.dialog::backdrop {
+    background-color: rgb(0 0 0 / 0.75);
+}
+
+.dialog__form {
+    display: grid;
+    gap: 30px;
+}
+
+.dialog__content {
+    display: grid;
+    grid-template-columns: 39px 1fr;
+    align-items: center;
+    gap: 20px;
+}
+
+.dialog__icon {
+    inline-size: 39px;
+    block-size: 39px;
+}
+
+.dialog__title {
+    font-family: var(--accent-font), fantasy;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.dialog__button {
+    inline-size: 100%;
+    min-block-size: 40px;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    padding-block: 50px;
+}
+
+.footer__save-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    min-block-size: 55px;
+    padding: 10px 20px;
+}
+
+.save-icon {
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+    width: 21px;
+    height: 21px;
+}
+
+@media (width < 376px) {
+    .footer__save-button {
+        flex-direction: column;
+        min-block-size: 84px;
+        padding: 17px 20px 15px;
+        gap: 8px;
+    }
+
+    .save-icon {
+        width: 28px;
+        height: 28px;
+    }
+}
 

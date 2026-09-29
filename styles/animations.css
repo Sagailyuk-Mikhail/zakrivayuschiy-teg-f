@@ -10,10 +10,9 @@
 
 */
 
-/* Базовое */
-.like-icon {
-    display: block;
+.like-icon .heart {
     transform-origin: center;
+    transform-box: fill-box;
 }
 
 .like-icon .contour {
@@ -26,23 +25,31 @@
     transition: fill 0.3s linear;
 }
 
-.like-icon .highlight {
-    opacity: 0;
-    transition: opacity 0.3s linear;
+.like-icon .core {
+    fill: transparent;
+    transition: fill 0.3s linear 0.03s;
 }
 
 .like-icon .sparks {
     opacity: 0;
 }
 
-/* Hover — тело чёрное, блик скрыт */
-.card__icon-button:hover .like-icon .main-body {
+.card__icon-button:hover .like-icon:not(.is-liked) .core {
+    fill: var(--contour-color);
+    transition: fill 0.3s linear 0s;
+}
+
+.card__icon-button:hover .like-icon:not(.is-liked) .main-body {
     fill: var(--contour-color);
     transition: fill 0.3s linear 0.05s;
 }
 
-/* Active — тело красное, блик скрыт */
-.card__icon-button:active .like-icon .main-body {
+.card__icon-button:active .like-icon:not(.is-liked) .core {
+    fill: var(--animation-fill-color);
+    transition: fill 0.3s linear 0s;
+}
+
+.card__icon-button:active .like-icon:not(.is-liked) .main-body {
     fill: var(--animation-fill-color);
     transition: fill 0.3s linear 0.05s;
 }
@@ -58,20 +65,20 @@
     transition: fill 0.3s linear 0.06s;
 }
 
-.like-icon.is-liked .highlight {
-    opacity: 1;
-    transition: opacity 0.3s linear 0.1s;
+.like-icon.is-liked .core {
+    fill: var(--animation-fill-color);
+    transition: fill 0.3s linear 0s;
 }
 
 /* Scale + sparks */
-@keyframes heart-scale {
-    0%   { transform: scale(1); }
-    50%  { transform: scale(1.25); }
-    100% { transform: scale(1); }
+@keyframes sparks {
+    0%   { opacity: 0; }
+    50%  { opacity: 1; }
+    100% { opacity: 0; }
 }
 
-.like-icon.is-liked .heart {
-    animation: heart-scale 0.3s ease-in 0.1s 1;
+.like-icon.is-liked .sparks {
+    animation: sparks 0.3s ease-in 0.3s 1 forwards;
 }
 
 @keyframes sparks {
