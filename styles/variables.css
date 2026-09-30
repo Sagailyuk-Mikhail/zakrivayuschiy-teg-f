@@ -15,7 +15,7 @@
     --border: 2px solid #000000;
     --button-text-color: #fff;
 
-    --content-width: clamp(375px, calc(260.6px + 30.52vw), 700px);
+    --content-width: clamp(375px, calc(260.6px + 30.52vw), 700px);     /* Можно ли такое свойство использовать для адаптива размеров карточек?*/
     --title-height: clamp(20.4375rem, 19.5352rem + 3.8498vw, 23rem);
 
 

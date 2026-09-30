@@ -15,6 +15,7 @@
     min-block-size: 100dvb;
     font-family: var(--main-font), sans-serif;
     background-image: var(--background-image);
+    background-color: var(--background-color);
     background-size: 100vw 100vh;
     background-position: center top;
     background-repeat: no-repeat;
@@ -86,6 +87,60 @@
     object-position: center;
 }
 
+.card__image--filter-1 {
+    filter:
+            contrast(103%)
+            saturate(105%);
+}
+
+.card__image--filter-2 {
+    filter:
+            sepia(15%)
+            saturate(95%)
+            contrast(102%);
+}
+
+.card__image--filter-3 {
+    filter:
+            saturate(120%)
+            brightness(105%)
+            contrast(108%);
+}
+
+.card__image--filter-4 {
+    filter:
+            sepia(10%)
+            saturate(110%)
+            contrast(104%);
+}
+
+.card__image--filter-5 {
+    filter:
+            hue-rotate(5deg)
+            saturate(108%)
+            contrast(103%);
+}
+
+.card__image--filter-6 {
+    filter:
+            contrast(106%)
+            saturate(103%);
+}
+
+.card__image--filter-7 {
+    filter:
+            blur(1px)
+            brightness(95%)
+            saturate(90%);
+}
+
+.card__image--filter-8 {
+    filter:
+            sepia(12%)
+            saturate(97%)
+            contrast(102%);
+}
+
 .card__content {
     margin-inline-start: 25px;
     margin-inline-end: 25px;
@@ -106,7 +161,7 @@
     inset-inline-end: 25px;
     font-family: var(--accent-font), fantasy;
     font-size: 14px;
-    opacity: 0.5;
+    opacity: 0.9;
     mix-blend-mode: hard-light;
     text-shadow: 1px 0 var(--background-color),
     -1px 0 var(--background-color),
