@@ -3,8 +3,7 @@
     --main-font: 'Inter';
     --accent-font: 'Press Start 2P';
 
-    --main-font-weight: 400;
-    --heading-font-weight: 700;
+    --heading-font-weight: 785;
 
     --accent-color: #000;
     --background-color: #fff;
@@ -16,7 +15,6 @@
     --button-text-color: #fff;
 
     --content-width: clamp(375px, calc(260.6px + 30.52vw), 700px);     /* Можно ли такое свойство использовать для адаптива размеров карточек?*/
-    --title-height: clamp(20.4375rem, 19.5352rem + 3.8498vw, 23rem);
 
 
     --background-image:
