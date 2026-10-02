@@ -74,7 +74,7 @@
         transform: scale(1);
     }
     50% {
-        transform: scale(1.4);
+        transform: scale(1.25);
     }
     100% {
         transform: scale(1);
@@ -82,7 +82,7 @@
 }
 
 .like-icon.is-liked .heart {
-    animation: heart-pulse 0.3s ease-out 0.15s 1;
+    animation: heart-pulse 0.3s ease-in 0.1s 1;
 }
 
 @keyframes sparks {
@@ -98,5 +98,5 @@
 }
 
 .like-icon.is-liked .sparks {
-    animation: sparks 0.3s ease-in 0.35s 1;
+    animation: sparks 0.3s ease-in 0.3s 1;
 }
