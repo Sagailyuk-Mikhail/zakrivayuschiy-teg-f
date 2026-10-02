@@ -336,6 +336,7 @@
     gap: 5px;
     min-block-size: 55px;
     padding: 10px 20px;
+    color: var(--background-color);
 }
 
 .save-icon {
@@ -344,7 +345,8 @@
     flex-shrink: 0;
     width: 21px;
     height: 21px;
-    color: var(--contour-color);
+    color: var(--background-color);
+    mix-blend-mode: difference;
 }
 
 @media (width < 376px) {
